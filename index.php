@@ -89,3 +89,13 @@ function sommaNumeri(...$numbers) //spread operator -> restituisce un array di d
 $risultato = sommaNumeri(1, 2, 3, 4, 5, 7);
 
 // echo $risultato;
+function sumReduce(...$numbers)
+{
+    $result = array_reduce($numbers, function ($acc, $el) {
+        // return $acc += $el;
+        return $acc = $acc + $el;
+    });
+    return $result;
+}
+// echo $risultato;
+sumReduce(1, 2, 3, 4, 5);
